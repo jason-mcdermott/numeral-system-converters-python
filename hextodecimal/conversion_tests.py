@@ -2,7 +2,7 @@ import unittest
 import hex_to_decimal
 
 class HexToDecimalConversionTest(unittest.TestCase):
-    """Tests for the hexToDecimal convert() function"""
+    """Tests for the hex_to_decimal.convert() function"""
 
     def test_1(self):
         """should return 175 when the input is 'AF'"""
