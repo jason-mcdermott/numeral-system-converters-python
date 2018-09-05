@@ -35,6 +35,7 @@ def convert(input):
         value = left / base
             
     remainders.reverse()
+    
     for r in remainders:
         result += map.get(r)
     
