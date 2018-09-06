@@ -1,4 +1,4 @@
-map = {   
+codes = {   
     0: '0',
     1: '1',
     2: '2',
@@ -17,24 +17,24 @@ map = {
     15: 'F'
     } 
 
-base = 16
+BASE = 16
 
 def convert(input):
     result = ''
     remainders = []
-    value = input / base
+    value = input / BASE
 
     while value > 0:
         left = int(value)
         right = value - int(value)
 
-        remainder = right * base
+        remainder = right * BASE
         remainders.append(int(remainder))
-        value = left / base
+        value = left / BASE
             
     remainders.reverse()
     
     for r in remainders:
-        result += map.get(r)
+        result += codes.get(r)
     
     return result

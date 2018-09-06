@@ -1,4 +1,4 @@
-map = {   
+codes = {   
     '0': 0,
     '1': 1, 
     '2': 2, 
@@ -17,20 +17,20 @@ map = {
     'F': 15 
     } 
 
-base = 16
+BASE = 16
 
 def convert(input):
     ints = []
     result = 0
 
     for c in input:
-        ints.append(map.get(c))
+        ints.append(codes.get(c))
 
     ints.reverse()
 
     for idx, val in enumerate(ints):
         if(val != 0):
-            result += ints[idx] * pow(base, idx)
+            result += ints[idx] * pow(BASE, idx)
 
     return result
 
